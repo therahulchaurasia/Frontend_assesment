@@ -112,7 +112,7 @@ const Layout = ({ children }: ChildContainerProps) => {
         unbindProfileMenuOutsideClickListener();
     });
 
-    const containerClass = classNames('layout-wrapper', {
+    const containerClass = classNames('layout-wrapper layout-static-inactive', {
         'layout-overlay': layoutConfig.menuMode === 'overlay',
         'layout-static': layoutConfig.menuMode === 'static',
         'layout-static-inactive': layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static',
@@ -133,7 +133,7 @@ const Layout = ({ children }: ChildContainerProps) => {
                     <div className="layout-main">{children}</div>
                     <AppFooter />
                 </div>
-                <AppConfig />
+                {/* <AppConfig /> */}
                 <div className="layout-mask"></div>
             </div>
         </React.Fragment>
